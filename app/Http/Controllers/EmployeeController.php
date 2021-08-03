@@ -14,14 +14,14 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        // $user = User::with('date')->latest()->get();
-        // dd(User::latest()->get());
+        
         return view('Employee.home',[
-            'employees' => User::with('date')->latest()->paginate(15),
-            
+            'employees' => User::with('date')
+                            ->where('id', 'LIKE', "%$request->q%")
+                            ->latest()
+                            ->paginate(13),
         ]);
     }
 
@@ -57,50 +57,5 @@ class EmployeeController extends Controller
         ]);
         
         return redirect()->route('home');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
