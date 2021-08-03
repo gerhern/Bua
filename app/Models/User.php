@@ -26,4 +26,8 @@ class User extends Authenticatable
         return $this->hasOne(Date::class);
     }
 
+    public function getFullNameAttribute(){
+        return "{$this->name}, {$this->firstName} {$this->secondName}";
+    }
+
 }

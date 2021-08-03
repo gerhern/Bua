@@ -17,7 +17,12 @@ class EmployeeController extends Controller
     public function index()
     {
         //
-        return view('Employee.home');
+        // $user = User::with('date')->latest()->get();
+        // dd(User::latest()->get());
+        return view('Employee.home',[
+            'employees' => User::with('date')->latest()->paginate(15),
+            
+        ]);
     }
 
     /**

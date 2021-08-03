@@ -20,24 +20,24 @@
         @csrf
 
         <label class="block font-medium text-lg text-gray-700">Nombre*</label>
-        <input type="text" name="name" class="form-input w-full rounded-md shadow-sm my-4" value="{{ old('name') }}">
+        <input type="text" name="name" class="form-input border-2 border-black w-full rounded-md shadow-sm my-4" value="{{ old('name') }}">
 
         <label class="block font-medium text-lg text-gray-700">Apellido Paterno*</label>
-        <input type="text" name="firstName" class="form-input w-full rounded-md shadow-sm my-4"
+        <input type="text" name="firstName" class="border-2 border-black form-input w-full rounded-md shadow-sm my-4"
             value="{{ old('firstName') }}">
 
         <label class="block font-medium text-lg text-gray-700">Apellido Materno*</label>
-        <input type="text" name="secondName" class="form-input w-full rounded-md shadow-sm my-4"
+        <input type="text" name="secondName" class="border-2 border-black form-input w-full rounded-md shadow-sm my-4"
             value="{{ old('secondName') }}">
 
         <label class="block font-medium text-lg text-gray-700">Fecha de Nacimiento*</label>
-        <input type="date" name="birthday" class="form-input w-full rounded-md shadow-sm my-4" value="{{ old('date') }}">
+        <input type="date" name="birthday" class="border-2 border-black form-input w-full rounded-md shadow-sm my-4" value="{{ old('date') }}">
 
         <label class="block font-medium text-lg text-gray-700">Ingreso Anual*</label>
-        <input type="number" step="0.01" name="annualInn" class="form-input w-full rounded-md shadow-sm my-4"
+        <input type="number" step="0.01" name="annualInn" class="border-2 border-black form-input w-full rounded-md shadow-sm my-4"
             value="{{ old('number') }}">
 
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-md my-2">Crear</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-md my-2 shadow-md">Crear</button>
 
     </form>
 

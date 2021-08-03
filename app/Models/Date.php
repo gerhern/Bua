@@ -17,4 +17,12 @@ class Date extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function getBirthAttribute(){
+        return date("d/m/Y", strtotime($this->birthday));
+    }
+
+    public function getSalaryAttribute(){
+        return "$".number_format($this->annualInn,2);
+    }
 }

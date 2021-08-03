@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <main class="flex w-screen h-screen">
-        <header class="h-screen flex flex-col text-center w-1/8">
-            <nav class="h-screen bg-black text-white text-2xl flex flex-col justify-evenly items-center">
+    <main class="flex w-screen h-screen overflow-y-auto">
+        <header class="h-screen flex flex-col text-center w-1/8 sticky top-0 z-50">
+            <nav class="h-screen bg-black text-white text-2xl flex flex-col justify-evenly items-center relative">
 
                 <a href="{{ route('home') }}"
                     class="hover:text-black hover:bg-white w-full flex flex-grow items-center justify-center">Inicio</a>
@@ -23,9 +23,12 @@
                     class="hover:text-black hover:bg-white w-full flex flex-grow items-center justify-center">Crear
                     Empleado</a>
 
+                    <a href="{{ route('apiIndex') }}"
+                    class="hover:text-black hover:bg-white w-full flex flex-grow items-center justify-center">Coleccion Api</a>
+                    
             </nav>
         </header>
-        <section class="bg-red-500 w-full">
+        <section class="w-full">
             @yield('content')
         </section>
     </main>
