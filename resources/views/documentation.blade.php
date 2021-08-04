@@ -58,6 +58,8 @@
 
             <p class="text-2xl px-2 my-6">Esta aplicacion web cuenta con un crontab el cual limpiara los registros existentes e insertara 25 nuevos registros cada hora.</p>
 
+            <p class="text-2xl px-2 my-6 font-bold"><span class="font-black">***</span>Por motivos economicos esta aplicacion web no cuenta con el crontab activado, con el primer salario se activara esta funcion <span class="font-black">***</span></p>
+
            <p class="text-2xl px-2 my-6">Puntos Extra:</p>
 
            <p class="text-2xl px-2 bg-green-500 text-white">Se encuentran completas las validaciones en los formularios</p>
