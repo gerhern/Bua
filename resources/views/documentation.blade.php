@@ -54,7 +54,9 @@
 
             <h3 class=" w-full p-4 text-4xl bg-black text-white rounded-md shadow-md">Comentarios:</h3>
 
-            <p class="text-2xl px-2">Esta evaluacion tecnica ha sido completada utilizando el framework de Laravel 8, a nivel de base de datos se cumplen con los requisitos por medio del ORM Eloquent.</p>
+            <p class="text-2xl px-2">Esta evaluacion tecnica ha sido completada utilizando el framework de Laravel 8 mientras que a nivel de base de datos se cumplen con los requisitos por medio del ORM Eloquent.</p>
+
+            <p class="text-2xl px-2 my-6">Esta aplicacion web cuenta con un crontab el cual limpiara los registros existentes e insertara 25 nuevos registros cada hora.</p>
 
            <p class="text-2xl px-2 my-6">Puntos Extra:</p>
 
