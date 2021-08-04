@@ -18,3 +18,5 @@ use App\Http\Controllers\EmployeeController;
 Route::get('/',[EmployeeController::class, 'index'])->name('home');
 
 Route::resource('employee', EmployeeController::class);
+
+Route::view('documentation', 'documentation')->name('doc');

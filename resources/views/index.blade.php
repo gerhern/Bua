@@ -25,6 +25,9 @@
 
                     <a href="{{ route('apiIndex') }}"
                     class="hover:text-black hover:bg-white w-full flex flex-grow items-center justify-center">Coleccion Api</a>
+
+                    <a href="{{ route('doc') }}"
+                    class="hover:text-black hover:bg-white w-full flex flex-grow items-center justify-center">Documentacion</a>
                     
             </nav>
         </header>
