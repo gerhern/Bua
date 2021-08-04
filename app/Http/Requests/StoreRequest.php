@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
@@ -23,12 +24,13 @@ class StoreRequest extends FormRequest
      */
     public function rules()
     {
+        $date = Carbon::now();
         return [
             //
             'name' => 'required | string',
             'firstName' => 'required | string',
             'secondName' => 'required | string',
-            'birthday' => 'required | date',
+            'birthday' => "required | date | before:{$date}" ,
             'annualInn' => 'required | numeric'
         ];
     }
@@ -46,7 +48,9 @@ class StoreRequest extends FormRequest
             'firstName.string' => 'Tipo de dato invalido',
             'secondName.string' => 'Tipo de dato invalido',
             'birthday.date' => 'Tipo de dato invalido',
-            'annualInn.numeric' => 'Tipo de dato invalido'
+            'annualInn.numeric' => 'Tipo de dato invalido',
+
+            'birthday.before' => 'La fecha no puede ser mayor al dia de hoy'
         ];
     }
 }
