@@ -108,7 +108,7 @@
                 <li> <a href="{{ route('apiIndex') }}">http://buatest.herokuapp.com/api/v1/employees</a></li>
             </ul>
 
-            <p class="text-2xl px-2 my-6">Recurso</p>
+            <p class="text-2xl px-2 my-6">Recursos</p>
 
             <ul class="py-6 px-8 text-xl">
                 <li> <a href="#">http://buatest.herokuapp.com/api/v1/employees/{ID}</a></li>
