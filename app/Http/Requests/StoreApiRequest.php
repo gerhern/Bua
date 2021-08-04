@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreApiRequest extends FormRequest
@@ -18,12 +19,13 @@ class StoreApiRequest extends FormRequest
 
     public function rules()
     {
+        $date = Carbon::now();
         return [
             //Reglas de validacion de los datos enviados mediante api
             'name'       => 'required',
             'firstName'  => 'required',
             'secondName' => 'required',
-            'birthday'   => 'required',
+            'birthday'   => "required | before:{$date}",
             'annualInn'  => 'required'
         ];
     }
@@ -37,6 +39,8 @@ class StoreApiRequest extends FormRequest
             'secondName.required' => 'Apellido materno de empleado es obligatorio',
             'birthday.required' => 'Fecha de nacimiento de empleado es obligatoria',
             'annualInn.required' => 'Los ingresos anuales del empleado son obligatorios',
+
+            'birthday.before' => 'La fecha no puede ser mayor al dia de hoy'
         ];
     }
 }
