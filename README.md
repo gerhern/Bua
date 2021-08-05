@@ -1,62 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Prueba de evaluacion tecnica
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### Prueba el resultado de esta prueba en http://buatest.herokuapp.com
 
-## About Laravel
+## Objetivo:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Crear una aplicación web en php que permita registrar empleados con las siguientes características
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Datos de los empleados:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* ####  Nombre
+* ### Apellido Paterno
+* ### Apellido Materno
+* ### Fecha de nacimiento (El registro de la fecha será en formato dd/mm/Y)
+* ### Ingresos anuales (cantidad a 2 decimales)
 
-## Learning Laravel
+### Para esta prueba puede utilizar el framework PHP o Javascript de su preferencia. Puede hacer uso de las librerías de php/javascript que desee
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instrucciones:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 1. Crear 2 tablas una que contenga el nombre del usuario y la segunda tabla que tenga la fecha de nacimiento y los ingresos anuales.
 
-## Laravel Sponsors
+### 2. Crear una pagina la cual contenga un formulario que permita ingresar nuevos empleados.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 3. Crear una pagina la cual muestre el listado de los empleados guardados y crear un formulario que permita consultar un empleado por medio del ID del empleado.
 
-### Premium Partners
+### 4. Crear una API por medio de un servicio web REST que permite agregar empleados y consultar un empleado por medio del envío del ID del empleado desde el consumo de la misma.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+## Puntos Extras:
 
-## Contributing
+* ### Validación de los datos que se ingresan en el formulario.
+* ### Utilizar ajax para guardar o mostrar los datos.
+* ### Utilizar Bootstrap (la versión que desee) para la interfaz gráfica de las páginas.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Comentarios:
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Esta evaluacion tecnica ha sido completada utilizando el framework de Laravel 8 mientras que a nivel de base de datos se cumplen con los requisitos por medio del ORM Eloquent.
 
-## Security Vulnerabilities
+#### Esta aplicacion web cuenta con un crontab el cual limpiara los registros existentes e insertara 25 nuevos registros cada hora.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### __Por motivos economicos esta aplicacion web no cuenta con el crontab activado, con el primer salario se activara esta funcion__
 
-## License
+## Puntos Extra:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+####  [X] Se encuentran completas las validaciones en los formularios
+
+#### [ ] No se implemento el uso de Ajax para guardar/mostrar datos
+
+#### [ ] No se realizo el uso de Bootstrap para el diseño de estilos, en su lugar se uso Tailwindcss
+
+## Esta aplicacion cuenta con una barra de tareas fija en la cual se encuentran los siguientes apartados:
+
+* ### Inicio
+* ### Crear Empleado
+* ### Coleccion Api
+* ### Documentacion
+
+# Inicio
+
+### En este apartado se encuentra el listado principal de empleados, los datos de estos empleados se muestran en una tabla los cuales estan ordenados mostrando primero los empleados que han sido registrados mas recientemente.
+
+### En el lateral derecho de esta tabla se muestra un boton en color verde el cual mostrara el empleado seleccionado en su formato Json indicado en el punto 4 para su consulta API, este es unicamente para poder ser visualizado de forma grafica pero es perfectamente consumible para servicios API REST.
+
+### En la parte superior se cuenta con una barra de busqueda la cual filtra la lista de trabajadores por medio de su ID y muestra todos los trabajadores que cuentan con un ID similar al ingresado, una vez realizada una busqueda al presionar el boton de "Buscar" nuevamente se muestran de nuevo todos los trabajadores.
+
+### Los resultados de esta seccion cuentan con paginacion ubicada en la parte inferior de la tabla, esta paginacion mostrara unicamente los primeros 13 resultados
+
+### En caso de no contar con registros para mostrar se mostrara un mensaje con la leyenda "No hay datos"
+
+# Crear Empleados
+
+### En este apartado se muestra el formulario de creacion de un empleado nuevo, todos los campos estan validados como requeridos, asi como los campos de fecha de nacimiento e ingreso anual cuentan con el formato especificado.
+
+### Al momento de tratar de registrar un empleado con datos incompletos o sin un formato adecuado la aplicacion web mostrara un cuadro con los errores registrados.
+
+# Coleccion API
+
+### Esta seccion fue creada para dar una muestra grafica del funcionamiento de los recursos API REST los cuales seran perfectamente consumibles mediante las urls:
+
+### Coleccion
+
+* ### http://buatest.herokuapp.com/api/v1/employees
+
+### Recursos
+
+* ### //buatest.herokuapp.com/api/v1/employees/__{ID}__
