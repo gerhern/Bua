@@ -56,9 +56,9 @@
 
             <p class="text-2xl px-2">Esta evaluacion tecnica ha sido completada utilizando el framework de Laravel 8 mientras que a nivel de base de datos se cumplen con los requisitos por medio del ORM Eloquent.</p>
 
-            <p class="text-2xl px-2 my-6">Esta aplicacion web cuenta con un crontab el cual limpiara los registros existentes e insertara 25 nuevos registros cada hora.</p>
+            {{-- <p class="text-2xl px-2 my-6">Esta aplicacion web cuenta con un crontab el cual limpiara los registros existentes e insertara 25 nuevos registros cada hora.</p>
 
-            <p class="text-2xl px-2 my-6 font-bold"><span class="font-black">***</span>Por motivos economicos esta aplicacion web no cuenta con el crontab activado, con el primer salario se activara esta funcion <span class="font-black">***</span></p>
+            <p class="text-2xl px-2 my-6 font-bold"><span class="font-black">***</span>Por motivos economicos esta aplicacion web no cuenta con el crontab activado, con el primer salario se activara esta funcion <span class="font-black">***</span></p> --}}
 
            <p class="text-2xl px-2 my-6">Puntos Extra:</p>
 
@@ -112,6 +112,14 @@
 
             <ul class="py-6 px-8 text-xl">
                 <li> <a href="#">http://buatest.herokuapp.com/api/v1/employees/{ID}</a></li>
+            </ul>
+
+            <h3 class=" w-full p-4 text-3xl bg-black text-white">Registro</h3>
+
+            <p class="text-2xl px-2 my-6">Esta aplicación puede recibir peticiones de creación de registros por medio del uso de herramientas para uso de API como son Postman o RESTed. Estas peticiónes de creacion se hacen haciendo uso de una petición de tipo POST con el cuerpo del formulario en la cabecera, en la siguiente url, </p>
+
+            <ul class="py-6 px-8 text-xl">
+                <li> <a href="#">http://buatest.herokuapp.com/api/v1/employees</a></li>
             </ul>
 
 
