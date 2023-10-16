@@ -105,13 +105,13 @@
             <p class="text-2xl px-2 my-6">Coleccion</p>
 
             <ul class="py-6 px-8 text-xl">
-                <li> <a href="{{ route('apiIndex') }}">http://buatest.herokuapp.com/api/v1/employees</a></li>
+                <li> <a href="{{ route('apiIndex') }}">http://18.224.24.3:1006/api/v1/employees</a></li>
             </ul>
 
             <p class="text-2xl px-2 my-6">Recursos</p>
 
             <ul class="py-6 px-8 text-xl">
-                <li> <a href="#">http://buatest.herokuapp.com/api/v1/employees/{ID}</a></li>
+                <li> <a href="#">http://18.224.24.3:1006/api/v1/employees/{ID}</a></li>
             </ul>
 
             <h3 class=" w-full p-4 text-3xl bg-black text-white">Registro</h3>
@@ -119,7 +119,7 @@
             <p class="text-2xl px-2 my-6">Esta aplicación puede recibir peticiones de creación de registros por medio del uso de herramientas para uso de API como son Postman o RESTed. Estas peticiónes de creacion se hacen haciendo uso de una petición de tipo POST con el cuerpo del formulario en la cabecera, en la siguiente url, </p>
 
             <ul class="py-6 px-8 text-xl">
-                <li> <a href="#">http://buatest.herokuapp.com/api/v1/employees</a></li>
+                <li> <a href="#">http://18.224.24.3:1006/api/v1/employees</a></li>
             </ul>
 
 
